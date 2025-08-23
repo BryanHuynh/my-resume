@@ -19,8 +19,8 @@ export const SkillLabel = ({ skill, color, key = 0 }: SkillLabelProps) => {
 	const classes = colorMap[color] || { bg: "bg-gray-200", text: "text-gray-500" };
 
 	return (
-		<div className={`rounded-lg p-2.5 px-5 m-2 ${classes.bg} hover:scale-110`} key={key}>
-			<span className={`${classes.text} text-lg font-semibold }`}>{skill}</span>
+		<div className={`rounded-lg p-1 px-2.5 md:p-2.5 md:px-5 m-2 ${classes.bg} hover:scale-110`} key={key}>
+			<span className={`${classes.text} text-xs md:text-xl font-semibold }`}>{skill}</span>
 		</div>
 	);
 };

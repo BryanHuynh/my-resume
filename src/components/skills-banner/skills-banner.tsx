@@ -17,8 +17,9 @@ export const SkillsBanner = () => {
 
 	return (
 		<div
-			className="overflow-hidden whitespace-nowrap py-2           
-			[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
+			className="w-80 md:w-auto
+			overflow-hidden whitespace-nowrap py-2           
+			[mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]
 			[mask-repeat:no-repeat]
 			[mask-size:100%_100%]"
 		>

@@ -5,8 +5,10 @@ import { SkillsBanner } from "./components/skills-banner/skills-banner";
 function App() {
 	return (
 		<>
-			<HeroCard></HeroCard>
-			<SkillsBanner></SkillsBanner>
+			<div className="container">
+				<HeroCard></HeroCard>
+				<SkillsBanner></SkillsBanner>
+			</div>
 		</>
 	);
 }
