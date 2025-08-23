@@ -10,7 +10,6 @@ export const SkillsBanner = () => {
 	useEffect(() => {
 		async function loadSkills() {
 			const skills = await SkillsFetch.fetchSkills();
-			console.log(skills);
 			setSkills(skills);
 		}
 		loadSkills();
