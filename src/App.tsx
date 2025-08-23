@@ -2,7 +2,6 @@ import "./App.css";
 import { HeroCard } from "./components/hero-card";
 import { SkillsBanner } from "./components/skills-banner/skills-banner";
 import { SkillsDropdown } from "./components/skills-dropdown/skills-dropdown";
-import { OpenForWorkFetch } from "./services/open-for-work-fetch";
 
 function App() {
 	return (
