@@ -32,6 +32,7 @@ export const SkillsBanner = () => {
 				{skills?.concat(skills).map((skill, index) => (
 					<SkillLabel key={index} skill={skill} color={RandomColorGenerator.generate()} />
 				))}
+				
 			</div>
 		</div>
 	);
