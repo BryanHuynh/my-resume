@@ -9,7 +9,6 @@ export const SkillsFetch = {
 			"Java",
 			"Python",
 			"Springboot",
-			"Figma",
 		]);
 	},
 };

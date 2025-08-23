@@ -1,12 +1,12 @@
 import "./App.css";
 import { HeroCard } from "./components/hero-card";
-import { SkillsCard } from "./components/skills-card";
+import { SkillsBanner } from "./components/skills-banner/skills-banner";
 
 function App() {
 	return (
 		<>
 			<HeroCard></HeroCard>
-			<SkillsCard></SkillsCard>
+			<SkillsBanner></SkillsBanner>
 		</>
 	);
 }
