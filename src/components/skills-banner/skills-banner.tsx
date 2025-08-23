@@ -22,7 +22,7 @@ export const SkillsBanner = () => {
 			[mask-repeat:no-repeat]
 			[mask-size:100%_100%]"
 		>
-			<div className="flex x-max animate-marquee">
+			<div className="animate-marquee flex x-max">
 				{skills?.concat(skills).map((skill, index) => (
 					<SkillLabel key={index} skill={skill} color={RandomColorGenerator.generate()} />
 				))}
