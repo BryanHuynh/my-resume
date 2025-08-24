@@ -6,7 +6,7 @@ import { SkillLabel } from "../skills-banner/skill-label";
 import { RandomColorGenerator } from "../../utils/random-color-generator";
 
 export const SkillsDropdown = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 	const [skills, setSkills] = useState<string[]>([]);
 
 	useEffect(() => {
