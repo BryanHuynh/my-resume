@@ -61,7 +61,7 @@ export const ExperienceCard = ({ key, experience }: ExperienceCardProps) => {
 
 						{!expanded && items.length > visableItemsCount && (
 							<div
-								className="absolute w-full h-full bottom-0 left-0 !cursor-progress bg-gradient-to-t from-white to-transparent"
+								className="absolute w-full h-full bottom-0 left-0 !cursor-pointer bg-gradient-to-t from-white to-transparent"
 								onClick={() => setExpanded(!expanded)}
 							/>
 						)}
@@ -69,7 +69,7 @@ export const ExperienceCard = ({ key, experience }: ExperienceCardProps) => {
 						{items.length > visableItemsCount && (
 							<button
 								onClick={() => setExpanded(!expanded)}
-								className="text-gray-60 !bg-transparent border-none p-0 hover:underline relative !cursor-progress"
+								className="text-gray-60 !bg-transparent border-none p-0 hover:underline relative !cursor-pointer"
 							>
 								{expanded ? "Show less" : "Show more"}
 							</button>
