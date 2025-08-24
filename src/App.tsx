@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<div className="container">
-				{/* Hello */}
+				{/* Hello There */}
 				<HeroCard></HeroCard>
 				<SkillsBanner></SkillsBanner>
 				<SkillsDropdown></SkillsDropdown>
