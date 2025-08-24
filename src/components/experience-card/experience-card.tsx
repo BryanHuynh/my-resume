@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import { useState } from "react";
 import type { WorkExperience } from "../../services/work-experience-fetch";
 
 type ExperienceCardProps = {
