@@ -6,18 +6,21 @@ type GitHubCommitProps = {
 };
 export const GitHubCommit = ({ key, event }: GitHubCommitProps) => {
 	return (
-		<tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+		<tr
+			key={key}
+			className="bg-white border-b border-gray-200"
+		>
 			<th
 				scope="row"
-				className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+				className="px-2 py-4 font-medium text-gray-900 whitespace-nowrap"
 			>
-				<a className="!cursor-pointer" target="_blank" href={event.repo_url}>
+				<a className="!cursor-pointer text-wrap md:text-nowrap text-xs md:text-md" target="_blank" href={event.repo_url}>
 					{event.repo}
 				</a>
 			</th>
-			<td className="px-6 py-4">{event.message}</td>
-			<td className="px-6 py-4">{new Date(event.date).toUTCString()}</td>
-			<td className="px-6 py-4">
+			<td className="px-2 py-4 text-xs md:text-md text-wrap">{event.message}</td>
+			<td className="px-2 py-4 text-xs md:text-md">{new Date(event.date).toUTCString()}</td>
+			<td className="px-2 py-4 text-xs md:text-md">
 				<a className="!cursor-pointer" target="_blank" href={event.url}>
 					{event.sha.substring(0, 7)}
 				</a>
