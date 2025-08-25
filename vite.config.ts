@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
-  base: "/my-resume",
-})
+	server: {
+		host: true,
+		port: 3000,
+	},
+	plugins: [tailwindcss()],
+	base: "/my-resume",
+});
