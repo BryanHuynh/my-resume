@@ -1,33 +1,29 @@
-type Event = {
-	type: string;
-	repo: string;
-	commits: Commit[];
-};
-
-type Commit = {
-	sha: string;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export type GithubEvent = {
 	message: string;
+	repo: string;
+	repo_url: string;
 	url: string;
+	sha: string;
+	date: string;
 };
 
 export const GitHubService = {
-	async fetchEvents(username: string) {
+	async fetchEvents(username: string): Promise<GithubEvent[]> {
 		const url = `https://api.github.com/users/${username}/events`;
 		const response: never[] = await fetch(url).then((response) => response.json());
-		const events: Event[] = response
-			.filter((event) => event["type"] === "PushEvent")
-			.map((event) => {
-				return {
-					type: event["type"],
+		const events: GithubEvent[] = response
+			.filter((event: any) => event["type"] === "PushEvent")
+			.flatMap((event: any) =>
+				event["payload"]["commits"].map((commit: any) => ({
+					message: commit.message,
+					repo_url: `https://github.com/${event.repo.name}`,
+					url: `https://github.com/${event.repo.name}/commit/${commit.sha}`,
+					sha: commit.sha,
 					repo: event["repo"]["name"],
-					commits:
-						(event["payload"]["commits"] as Commit[]).map((commit) => ({
-							sha: commit.sha,
-							message: commit.message,
-							url: commit.url,
-						})) || [],
-				};
-			});
-		console.log(events);
+					date: event["created_at"],
+				}))
+			);
+		return events;
 	},
 };
