@@ -2,6 +2,7 @@ type SkillLabelProps = {
 	skill: string;
 	color: string;
 	key?: number;
+	size?: 'sm' | 'md' | 'lg';
 };
 
 const colorMap: Record<string, { bg: string; text: string }> = {
@@ -15,12 +16,21 @@ const colorMap: Record<string, { bg: string; text: string }> = {
 	orange: { bg: "bg-orange-200", text: "text-orange-700" },
 };
 
-export const SkillLabel = ({ skill, color, key = 0 }: SkillLabelProps) => {
+
+
+export const SkillLabel = ({ skill, color, key = 0, size = 'md' }: SkillLabelProps) => {
 	const classes = colorMap[color] || { bg: "bg-gray-200", text: "text-gray-500" };
 
+	const sizeMap: Record<'sm' | 'md' | 'lg', { container: string; text: string }> = {
+		sm: { container: 'p-1 px-2', text: 'text-xs' },
+		md: { container: 'p-2 px-4', text: 'text-sm' },
+		lg: { container: 'p-2.5 px-5', text: 'text-xl' },
+	};
+	const sizing = sizeMap[size] || sizeMap.md;
+
 	return (
-		<div className={`rounded-lg h-fit p-1 px-2.5 md:p-2.5 md:px-5 m-2 ${classes.bg} hover:scale-110`} key={key}>
-			<span className={`${classes.text} text-xs md:text-xl font-semibold }`}>{skill}</span>
+		<div className={`rounded-lg h-fit ${sizing.container} m-2 ${classes.bg} hover:scale-110`} key={key}>
+			<span className={`${classes.text} ${sizing.text} font-semibold`}>{skill}</span>
 		</div>
 	);
 };
