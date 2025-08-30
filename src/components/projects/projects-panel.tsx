@@ -15,11 +15,11 @@ export const ProjectsPanel = () => {
 	}, []);
 
 	return (
-		<div className="w-full h-96">
+		<div className="w-full">
 			<span className="text-2xl md:text-3xl">Projects</span>
 			<div className="flex flex-col md:grid md:grid-cols-2 md:gap-4 md:mt-5">
 				{projects.map((project) => (
-					<div className="w-full min-h-124 ">
+					<div className="w-full md:min-h-124 ">
 						<Project project={project}></Project>
 					</div>
 				))}
