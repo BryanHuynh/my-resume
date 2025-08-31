@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import pfp from "../assets/PFP.png";
 import openForWork from "../assets/open-for-work.png";
 import { OpenForWorkFetch } from "../services/open-for-work-fetch";
+import { EmailElement } from "./email/email-element";
 
 export const HeroCard = () => {
 	const [openForWorkFlag, setOpenForWorkFlag] = useState(false);
@@ -28,6 +29,7 @@ export const HeroCard = () => {
 				</div>
 				<span className="text-3xl md:text-6xl">Hello! I am Bryan.</span>
 				<span className="text-2xl md:text-6xl text-gray-400"> A full stack developer</span>
+				<EmailElement />
 			</div>
 		</>
 	);
