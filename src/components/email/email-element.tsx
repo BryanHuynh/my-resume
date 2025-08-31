@@ -28,10 +28,10 @@ export const EmailElement = () => {
 		<div>
 			{email && (
 				<span
-					onClick={() => handleCopy("Bryan.Huynh42@gmail.com")}
+					onClick={() => handleCopy(email)}
 					className="mt-3 text-md md:text-lg text-gray-400 flex flex-row gap-1 items-center cursor-pointer"
 				>
-					Bryan.Huynh42@gmail.com
+					{email}
 					<ClipboardDocumentIcon className="w-5 h-5" />
 				</span>
 			)}
