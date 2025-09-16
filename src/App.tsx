@@ -1,6 +1,5 @@
 import "./App.css";
 import { ExperiencePanel } from "./components/experience-card/experience-panel";
-import { GitHubPanel } from "./components/gh-panel/gh-panel";
 import { HeroCard } from "./components/hero-card";
 import { ProjectsPanel } from "./components/projects/projects-panel";
 import { ResumePreview } from "./components/resume-preview/resume-preview";
