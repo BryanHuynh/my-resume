@@ -18,7 +18,6 @@ function App() {
 				<SkillsDropdown></SkillsDropdown>
 				<ExperiencePanel></ExperiencePanel>
 				<ResumePreview></ResumePreview>
-				<GitHubPanel></GitHubPanel>
 				<ProjectsPanel></ProjectsPanel>
 			</div>
 		</>

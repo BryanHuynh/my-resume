@@ -30,7 +30,7 @@ export const SkillLabel = ({ skill, color, key = 0, size = 'md' }: SkillLabelPro
 
 	return (
 		<div className={`rounded-lg h-fit ${sizing.container} m-2 ${classes.bg} hover:scale-110`} key={key}>
-			<span className={`${classes.text} ${sizing.text} font-semibold`}>{skill}</span>
+			<span className={`${classes.text} ${sizing.text} font-semibold capitalize`}>{skill}</span>
 		</div>
 	);
 };
