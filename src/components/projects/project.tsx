@@ -28,7 +28,7 @@ export const Project = ({ project }: ProjectProps) => {
 	return (
 		<div className="flex flex-col p-3">
 			<a
-				href={project.url}
+				href={project.repo_uri}
 				target="_blank"
 				rel="noreferrer"
 				className="w-fit hover:underline"
@@ -67,14 +67,26 @@ export const Project = ({ project }: ProjectProps) => {
 
 				<div className="mt-2">
 					<a
-						href={project.url}
+						href={project.repo_uri}
 						target="_blank"
 						rel="noreferrer"
 						className="text-blue-600 hover:text-blue-800 text-sm md:text-base"
 					>
-						View Project →
+						View Repo →
 					</a>
 				</div>
+				{project.website_link && (
+					<div className="mt-2">
+						<a
+							href={project.website_link}
+							target="_blank"
+							rel="noreferrer"
+							className="text-blue-600 hover:text-blue-800 text-sm md:text-base"
+						>
+							View Site →
+						</a>
+					</div>
+				)}
 			</div>
 		</div>
 	);

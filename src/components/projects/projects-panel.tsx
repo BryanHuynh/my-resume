@@ -8,7 +8,6 @@ export const ProjectsPanel = () => {
 	useEffect(() => {
 		async function fetchProjects() {
 			const res = await ProjectService.fetch();
-			console.log(res);
 			setProjects(res);
 		}
 		fetchProjects();
